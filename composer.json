@@ -7,9 +7,15 @@
             , "role": "Developer"
         }
     ]
+    , "require": {
+        "poirot/std": "dev-devel"
+    }
     , "autoload"  : {
         "psr-4": {
             "Poirot\\ValueObjects\\": "src/"
         }
+        , "files": [
+            "src/_functions.php"
+        ]
     }
 }
