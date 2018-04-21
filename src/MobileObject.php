@@ -93,8 +93,8 @@ class MobileObject
      */
     static function isConfigurableWith($optionsResource)
     {
-        return ( is_string($optionsResource) && \Poirot\ValueObjects\Mobile\isValidMobileNum($optionsResource) )
-            || parent::isConfigurableWith($optionsResource)
-        ;
+        return
+            ( is_string($optionsResource) && \Poirot\ValueObjects\Mobile\isValidMobileNum($optionsResource) )
+            || parent::isConfigurableWith($optionsResource);
     }
 }

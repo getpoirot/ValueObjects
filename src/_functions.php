@@ -35,3 +35,18 @@ namespace Poirot\ValueObjects\Mobile
         ];
     }
 }
+
+namespace Poirot\ValueObjects\Geo
+{
+    /**
+     * Is Valid Geo String?
+     *
+     * @return bool
+     */
+    function isValidGeoStr($geoStr)
+    {
+        // TODO Implement this
+
+        return true;
+    }
+}
