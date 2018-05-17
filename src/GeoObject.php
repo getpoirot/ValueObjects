@@ -47,6 +47,10 @@ class GeoObject
      */
     function setGeo(array $location)
     {
+        if ( empty($location) )
+            return $this;
+
+
         if ( isset($location['lon']) )
             $this->geo = array($location['lon'], $location['lat']);
         else
