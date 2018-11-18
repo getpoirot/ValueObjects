@@ -7,7 +7,7 @@ use Poirot\Std\Struct\aValueObject;
 class AmountObject
     extends aValueObject
 {
-    protected $value;
+    protected $value = 0;
     protected $currency = 'IRR';
 
 
@@ -76,6 +76,7 @@ class AmountObject
     }
 
 
+    // ..
 
     function __toString()
     {
