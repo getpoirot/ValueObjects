@@ -35,6 +35,21 @@ class AmountObject
     }
 
     /**
+     * Add Value By Amount Object
+     *
+     * @param AmountObject $amount
+     *
+     * @return $this
+     */
+    function add(AmountObject $amount)
+    {
+        $value = $this->getValue();
+        $this->setValue( $value + $amount->getValue() );
+
+        return $this;
+    }
+
+    /**
      * Set Currency
      * https://en.wikipedia.org/wiki/ISO_4217
      *
