@@ -84,10 +84,10 @@ class AmountObject
     {
         $r = [
             'IRR' => '﷼',
+            'EUR' => '€',
         ];
 
-
-        return ( isset($r['IRR']) ) ? $r['IRR'] : $curr;
+        return $r[strtoupper($curr)] ?? $curr;
     }
 
 
@@ -96,7 +96,6 @@ class AmountObject
     function __toString()
     {
         $curr = $this->getLiteralCurrency( $this->getCurrency() );
-
         return $curr.' '.$this->getValue();
     }
 }
