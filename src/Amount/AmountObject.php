@@ -8,7 +8,7 @@ class AmountObject
     extends aValueObject
 {
     protected $value = 0;
-    protected $currency = 'IRR';
+    protected $currency;
 
 
     /**
@@ -38,14 +38,18 @@ class AmountObject
      * Add Value By Amount Object
      *
      * @param AmountObject $amount
+     * @param int $power
      *
      * @return $this
      */
-    function add(AmountObject $amount)
+    function add(AmountObject $amount, $power = 1)
     {
         $value = $this->getValue();
-        $this->setValue( $value + $amount->getValue() );
+        if ($this->currency === null )
+            $this->setCurrency($amount->getCurrency());
 
+        // TODO when currency is not match
+        $this->setValue( $value + ($amount->getValue()*$power) );
         return $this;
     }
 
